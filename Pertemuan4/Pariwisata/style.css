@@ -61,7 +61,7 @@ label {
   padding: 10px;
 }
 
-.menu ul li:hover. dropdown li {
+.menu ul li:hover .dropdown li {
   display: block;
 }
 
