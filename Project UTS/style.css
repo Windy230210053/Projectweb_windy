@@ -1,0 +1,711 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 16px;
+  line-height: 1.5;
+  background-color: #fafaf5;
+  position: relative;
+}
+
+h1 {
+  font-size: 36px;
+}
+h2 {
+  font-size: 24px;
+}
+
+/* JUDUL DAN NAVIGASI */
+.judul {
+  display: block;
+  margin: 20px auto;
+  padding-top: 20px;
+  width: 110px;
+  height: 100px;
+}
+
+.menu {
+  width: 80%;
+  height: auto;
+  margin: auto;
+  margin-bottom: 50px;
+  padding-bottom: 15px;
+  background-color: rgba(0, 0, 0, 0.4);
+  box-shadow: 0 8px 5px #000;
+}
+
+nav ul {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 15px;
+}
+
+nav ul li {
+  display: block;
+  list-style: none;
+  position: relative;
+}
+
+nav ul li a:link {
+  color: #fff;
+  text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5);
+  text-decoration: none;
+  position: relative;
+  display: block;
+  padding: 5px;
+  text-align: center;
+}
+
+nav ul li a:visited {
+  color: #000;
+  text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5);
+}
+
+nav ul li a::after {
+  content: "";
+  background-color: rgba(75, 83, 32, 0.6);
+  width: 0;
+  height: 2px;
+  left: 0;
+  bottom: 0;
+  transition: width 0.3s ease;
+  position: absolute;
+}
+
+nav ul li a:hover::after {
+  width: 100%;
+}
+
+nav ul li .dropdown-menu {
+  display: none;
+  position: absolute;
+  background: rgba(0, 0, 0, 0.1);
+  padding: 10px;
+  box-shadow: 0 4px 12px transparent;
+}
+
+nav ul li:hover .dropdown-menu {
+  display: block;
+  width: 100%;
+}
+
+/* ISI KONTEN HOME */
+.container {
+  width: 880px;
+  height: auto;
+  margin: 0 auto;
+}
+.konten1 {
+  background-image: url("gambar/capella-bangkok.jpg");
+  background-size: 100% 100%;
+  margin: auto;
+  height: 350px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 70px;
+}
+.konten1-text {
+  background-color: rgba(0, 0, 0, 0.3);
+  width: auto;
+  margin: auto;
+  padding: 30px 60px;
+  padding-top: 0;
+  color: white;
+  text-align: center;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3);
+}
+
+.konten1-text p {
+  margin-top: 30px;
+}
+
+.home1 {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 30px;
+  margin-bottom: 30px;
+}
+
+.home1 img {
+  width: 50%;
+  flex: 1;
+  align-self: stretch;
+}
+
+.penjelasan-home h2 {
+  font-size: 22px;
+}
+
+.penjelasan-home p,
+.penjelasan-home h2 {
+  margin-bottom: 10px;
+}
+
+.penjelasan-home p {
+  color: #4a4a4a;
+}
+.accomadation p {
+  width: 500px;
+  color: #4a4a4a;
+}
+
+.gambar-kiri {
+  display: flex;
+  gap: 50px;
+  align-items: center;
+  margin-bottom: 30px;
+}
+
+.gambar-kiri img {
+  width: 70%;
+  flex: 1;
+}
+
+.gambar-kiri h2 {
+  flex: 1;
+  text-align: center;
+}
+
+.gambar-kiri,
+.gambar-kanan {
+  text-align: center;
+}
+
+.gambar-kanan {
+  display: flex;
+  gap: 50px;
+  align-items: center;
+  margin-bottom: 30px;
+  justify-content: center;
+}
+
+.gambar-kanan img {
+  width: 70%;
+  flex: 1;
+}
+
+.gambar-kanan h2 {
+  text-align: center;
+  flex: 1;
+}
+
+.penjelasan-akomodasi h2 {
+  margin-bottom: 18px;
+}
+
+.penjelasan-akomodasi p {
+  color: #4a4a4a;
+}
+
+/* FOOTER */
+footer {
+  background: #111;
+  height: auto;
+  width: 100%;
+  padding-top: 10px;
+  line-height: 1.4;
+  color: #fff;
+}
+
+.footer-content {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  text-align: center;
+}
+
+.footer-content h3 {
+  font-size: 2.1rem;
+  font-weight: 500;
+  text-transform: capitalize;
+  line-height: 3rem;
+}
+
+.footer-content p {
+  max-width: 500px;
+  margin: 10px auto;
+  line-height: 28px;
+  font-size: 14px;
+  color: #cacdd2;
+}
+
+.socials {
+  list-style: none;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 10px 0 20px 0;
+}
+
+.socials li {
+  margin: 0 10px;
+}
+
+.socials a {
+  text-decoration: none;
+  color: #fff;
+  border: 1.1px solid white;
+  padding: 5px;
+  border-radius: 50%;
+}
+
+.socials a i {
+  font-size: 1.1rem;
+  width: 20px;
+  transition: color 0.4s ease;
+}
+
+.socials a:hover i {
+  color: aqua;
+}
+
+.footer-content p:last-child {
+  text-transform: uppercase;
+  border-top: 1px solid white;
+}
+
+/* ISI KONTEN KAMAR */
+.judulkonten {
+  text-align: center;
+  margin-bottom: 80px;
+}
+
+.kamar2 {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  gap: 50px;
+  margin-bottom: 100px;
+}
+
+.kamar2 img {
+  max-width: 50%;
+  flex: 1;
+}
+
+.isi {
+  margin-top: 10px;
+  color: #4a4a4a;
+  flex: 1;
+}
+
+.vila2 {
+  margin-bottom: 0;
+}
+
+.link-right {
+  text-align: right;
+}
+
+.link-left {
+  text-align: left;
+}
+
+.tipe a:link {
+  color: white;
+  display: inline-block;
+  margin-top: 18px;
+  text-decoration: none;
+  background-color: #4b5320;
+  padding: 10px 24px;
+}
+
+.tipe a:hover {
+  opacity: 0.8;
+}
+
+.tipe a:visited {
+  color: white;
+}
+
+.fasilitas-kamar {
+  width: 500px;
+  margin-top: 50px;
+  margin-right: auto;
+  color: #221b1b;
+}
+
+.isi-fasilitas {
+  padding: 20px 80px;
+  margin-bottom: 30px;
+  color: #4a4a4a;
+}
+
+/* KONTEN MEETING & EVENTS */
+.judulkontenacara {
+  text-align: center;
+  margin-bottom: 30px;
+}
+
+.isi-judul {
+  text-align: center;
+  margin-bottom: 30px;
+  color: #4a4a4a;
+}
+
+.meetings {
+  display: flex;
+  gap: 20px;
+  max-width: 880px;
+  margin: 0 auto;
+}
+
+.ruang {
+  flex: 1;
+  margin-bottom: 10px;
+  color: #4a4a4a;
+}
+
+.ruang img {
+  width: 100%;
+  height: auto;
+  margin-bottom: 20px;
+}
+
+.ruang h2 {
+  text-align: center;
+  margin-bottom: 20px;
+  font-size: 20px;
+  color: black;
+}
+
+.ruang .link-right {
+  margin-bottom: 30px;
+}
+
+.ruang .atelier1 {
+  margin-top: 25px;
+}
+
+.atelier-courtyard {
+  margin-top: 24px;
+}
+.ruang .link-right a:link {
+  color: white;
+  display: inline-block;
+  margin-top: 18px;
+  text-decoration: none;
+  background-color: #4b5320;
+  padding: 5px 16px;
+}
+
+.ruang .link-right a:hover {
+  opacity: 0.8;
+}
+
+.ruang .link-right a:visited {
+  color: white;
+}
+
+/* KONTAK */
+.judul-kontak {
+  text-align: center;
+  margin-bottom: 70px;
+}
+
+.kontak {
+  display: flex;
+  gap: 200px;
+  justify-content: center;
+  margin-bottom: 40px;
+}
+
+.kontak-icon {
+  margin-bottom: 25px;
+}
+
+.kontak-kami {
+  border: 1px solid #a0b3c0;
+  padding: 30px 25px;
+  text-align: center;
+  font-family: "Segoe UI";
+  border-radius: 10px;
+  flex: 1;
+  overflow-wrap: break-word;
+  margin-bottom: 30px;
+}
+
+.kontak-kami h2 {
+  margin-bottom: 20px;
+  text-decoration: underline;
+}
+
+.kontak-kami p,
+.kontak-icon a:visited {
+  color: #4a4a4a;
+}
+
+form {
+  margin-top: 25px;
+}
+
+.form-row {
+  display: flex;
+  gap: 10px;
+  margin-bottom: 10px;
+}
+
+form input,
+form textarea {
+  width: 100%;
+  padding: 10px;
+  border: none;
+  border-bottom: 1px solid #ccc;
+  font-size: 14px;
+  background: transparent;
+}
+
+.form-row input {
+  width: 50%;
+}
+
+form textarea {
+  resize: vertical;
+  min-height: 100px;
+}
+
+button {
+  background-color: #c2a656;
+  color: white;
+  padding: 12px 25px;
+  border: none;
+  border-radius: 4px;
+  font-size: 15px;
+  cursor: pointer;
+  margin-top: 10px;
+}
+
+button:hover {
+  background-color: #a78e46;
+}
+
+/* LOKASI */
+.judul-lokasi {
+  margin-bottom: 15px;
+}
+
+.isi-lokasi {
+  max-width: 450px;
+  margin-right: auto;
+  margin-bottom: 30px;
+  color: #4a4a4a;
+}
+
+.isi2-lokasi {
+  text-align: center;
+  margin-bottom: 30px;
+  min-width: 300px;
+  color: #4a4a4a;
+}
+
+.isi2-lokasi h2 {
+  margin-bottom: 20px;
+  color: #000;
+}
+
+.isi2-lokasi p {
+  width: 70%;
+  margin: auto;
+}
+
+.peta {
+  flex: 1;
+  min-width: 300px;
+  height: 350px;
+  border: 2px solid #ccc;
+  border-radius: 10px;
+  margin-bottom: 65px;
+}
+
+iframe {
+  filter: invert(100%);
+  width: 100%;
+  height: 100%;
+  border: none;
+}
+
+/* RESTORAN */
+.restoran {
+  text-align: center;
+  margin-bottom: 50px;
+}
+
+.restoran h1 {
+  margin-bottom: 30px;
+}
+
+.restoran p {
+  color: #4a4a4a;
+}
+
+.jenis-restoran {
+  max-width: 880px;
+  display: flex;
+  margin: 0 auto;
+  gap: 50px;
+}
+
+.penjelasan-restoran {
+  flex: 1;
+  margin-bottom: 30px;
+}
+
+.penjelasan-restoran img {
+  width: 100%;
+  height: 50%;
+}
+
+.penjelasan-restoran h2 {
+  margin-bottom: 13px;
+}
+
+.penjelasan-restoran p {
+  color: #4a4a4a;
+}
+
+.jenis-restoran a:link {
+  color: white;
+  display: inline-block;
+  margin-top: 18px;
+  text-decoration: none;
+  background-color: black;
+  padding: 10px 24px;
+}
+
+.jenis-restoran a:last-child {
+  margin-left: 18px;
+}
+.jenis-restoran a:first-child {
+  margin-left: 0;
+}
+
+.stella {
+  margin-bottom: 46px;
+}
+
+.jenis-restoran a:hover {
+  background-color: rgba(0, 0, 0, 0.3);
+  color: black;
+  border: 1px solid black;
+}
+
+.jenis-restoran a:visited {
+  color: white;
+}
+
+.jenis-restoran .link-left {
+  margin-bottom: 60px;
+}
+
+/* FASILITAS */
+.judul-fasilitas,
+.isi-fasilitas-umum {
+  text-align: center;
+}
+
+.judul-fasilitas {
+  margin-bottom: 30px;
+}
+
+.isi-fasilitas-umum {
+  margin-bottom: 50px;
+  color: #4a4a4a;
+}
+
+.fasilitas-utama {
+  display: flex;
+  gap: 32px;
+  margin-bottom: 70px;
+}
+
+.fasilitas-utama .gambar-fasilitas {
+  flex: 1;
+}
+
+.fasilitas-utama img {
+  width: 100%;
+  height: 100%;
+}
+
+.isi-layanan,
+.isi-kolam {
+  flex: 1;
+  background: #fff;
+  padding: 32px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.05);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.isi-layanan {
+  border-left: 4px solid #d4a373;
+}
+.isi-kolam {
+  border-right: 4px solid #d4a373;
+}
+
+.isi-layanan p,
+.isi-kolam p {
+  color: #4a4a4a;
+}
+
+/* PROFIL HOTEL */
+.judul-profil-hotel,
+.penjelasan-hotel {
+  text-align: center;
+  margin-bottom: 30px;
+}
+
+.capella-profil {
+  display: block;
+  margin: auto;
+  width: 70%;
+  margin-bottom: 50px;
+  box-shadow: 2px 8px 10px #000;
+}
+
+/* BIODATA */
+.judul-pengguna {
+  text-align: center;
+  margin-bottom: 30px;
+}
+
+.isi-pengguna {
+  display: flex;
+  border: 1px solid #a0b3c0;
+  padding: 70px 50px;
+  margin-bottom: 30px;
+  gap: 80px;
+  justify-content: flex-start;
+}
+
+.isi-pengguna img {
+  height: 300px;
+}
+
+.isi-pengguna p {
+  color: #4a4a4a;
+}
+
+.biodata-pengguna {
+  align-self: center;
+  text-align: left;
+}
+
+.biodata-pengguna p {
+  text-align: center;
+  margin-bottom: 30px;
+}
+
+.biodata-pengguna p:first-child {
+  margin-bottom: 10px;
+}
